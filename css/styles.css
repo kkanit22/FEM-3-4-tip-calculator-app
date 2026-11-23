@@ -1,4 +1,4 @@
-.root {
+:root {
   --font-1: 700 3rem / 4.4375rem "Space Mono", sans-serif;
   --font-2: 700 2rem / 2.9375rem "Space Mono", sans-serif;
   --font-3: 700 1.5rem / 3rem "Space Mono", sans-serif;
@@ -14,7 +14,89 @@
 }
 
 body {
+  background: #C5E4E7;
   font-family: "Space Mono";
+}
+
+main {
+  background: #FFFFFF;
+  border-radius: 1.5625rem 1.5625rem 0 0;
+}
+main form .input-label {
+  color: #5E7A7D;
+  font: var(--font-5);
+}
+main form .input-wrapper {
+  background: #F3F9FA;
+  border-radius: 0.3125rem;
+}
+main form .input-wrapper:has(input:focus) {
+  box-shadow: inset 0 0 0 2px #26C2AE;
+}
+main form .input-wrapper input {
+  color: #00474B;
+  font: var(--font-3);
+  text-align: right;
+  background: transparent;
+  border: 0;
+}
+main form .input-wrapper input:focus {
+  outline: none;
+}
+main form input[type=radio] {
+  color: #FFFFFF;
+  font: var(--font-3);
+  appearance: none;
+  background: #00474B;
+  border-radius: 0.3125rem;
+  padding: 0 1rem;
+}
+main form input[type=radio].preset-tip-percentage::after {
+  content: attr(value) "%";
+}
+main form .custom-tip-radio {
+  background: #F3F9FA;
+  border-radius: 0.3125rem;
+  padding: 0 1rem;
+}
+main form .custom-tip-radio input[type=radio] {
+  appearance: none;
+}
+main form .custom-tip-radio input[type=number] {
+  color: #FFFFFF;
+  font: var(--font-3);
+  border: none;
+  outline: none;
+}
+main form .custom-tip-radio input[type=number]:focus {
+  box-shadow: inset 0 0 0 2px #26C2AE;
+  outline: none;
+}
+main .results {
+  background: #00474B;
+  border-radius: 0.9375rem;
+}
+main .results .results-label {
+  color: #FFFFFF;
+  font: var(--font-5);
+}
+main .results .results-label .results-person {
+  color: #7F9D9F;
+  font: var(--font-6);
+}
+main .results .amount-display {
+  color: #26C2AE;
+  font: var(--font-2);
+  letter-spacing: -0.67px;
+}
+main .results .reset-button {
+  color: #00474B;
+  font: var(--font-4);
+  text-transform: uppercase;
+  background: #26C2AE;
+  border: 0;
+  border-radius: 0.3125rem;
+  padding: 0.5rem 2rem;
 }
 
 .attribution {
@@ -24,6 +106,89 @@ body {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 3.125rem;
+  position: relative;
+}
+
+header > img {
+  margin-bottom: 2.125rem;
+}
+
+main {
+  padding: 2rem 1.5rem;
+}
+main form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 0.5rem 2rem;
+}
+main form .form-section {
+  width: 100%;
+}
+main form .input-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+main form .input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+main form .input-wrapper img {
+  height: 1rem;
+}
+main form .input-wrapper input {
+  width: 100%;
+}
+main form .radio-array {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+main form .radio-array input[type=radio] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc((100% - 1rem) / 2);
+}
+main form .radio-array .custom-tip-radio {
+  position: relative;
+  width: calc((100% - 1rem) / 2);
+}
+main form .radio-array .custom-tip-radio input[type=number] {
+  position: absolute;
+  top: 0;
+  text-align: center;
+  width: calc(100% - 2rem);
+  z-index: 1;
+}
+main .results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+}
+main .results .result {
+  display: flex;
+  justify-content: space-between;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0.25rem;
 }
 
 /*# sourceMappingURL=styles.css.map */

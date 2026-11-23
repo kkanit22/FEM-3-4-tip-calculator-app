@@ -1,30 +1,33 @@
+@use 'variables';
+
 @mixin label-typography {
-	color: $gray-500;
+	color: variables.$gray-500;
 	font: var(--font-5);
 }
 
 @mixin field-typography {
-	color: $green-900;
+	color: variables.$green-900;
 	font: var(--font-3);
+	text-align: right;
 }
 
 @mixin button-typography {
-	color: $white;
+	color: variables.$white;
 	font: var(--font-3);
 }
 
 @mixin results-label-typography {
-	color: $white;
+	color: variables.$white;
 	font: var(--font-5);
 }
 
 @mixin results-person-typography {
-	color: $gray-400;
+	color: variables.$gray-400;
 	font: var(--font-6);
 }
 
 @mixin result-typography-small {
-	color: $green-400;
+	color: variables.$green-400;
 	font: var(--font-2);
 	letter-spacing: -0.67px;
 }
@@ -35,6 +38,7 @@
 }
 
 @mixin reset-typography {
-	color: $green-900;
+	color: variables.$green-900;
 	font: var(--font-4);
+	text-transform: uppercase;
 }
