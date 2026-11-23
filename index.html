@@ -22,42 +22,53 @@
 	</header>
 	<main>
 		<form>
-			<label for="bill-amount" class="bill-amount-label">Bill</label>
-			<input type="number" id="bill-amount" name="bill_amount" class="bill-amount"  placeholder="0" required>
-
-			<div class="tip-percentage-options">
-				<label for="tip-percentage" class="tip-percentage-label">Select Tip %</label>
-				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="5%" checked>
-
-				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="10%">
-
-				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="15%">
-
-				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="25%">
-
-				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="50%">
-
-				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="Custom">
+			<div class="form-section">
+				<label for="bill-amount" class="input-label">Bill</label>
+				<div class="input-wrapper">
+					<img src="./images/icon-dollar.svg" alt="" />
+					<input type="number" id="bill-amount" name="bill_amount" class="bill-amount" placeholder="0" required>
+				</div>
 			</div>
-
-			<label for="number-of-people" class="number-of-people-label">Number of People</label>
-			<input type="number" id="number-of-people" name="number_of_people" class="number-of-people" placeholder="0" required>
+			<div class="form-section">
+				<div class="tip-percentage-options">
+					<label for="tip-percentage" class="input-label">Select Tip %</label>
+					<div class="radio-array">
+						<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage preset-tip-percentage" value="5" checked>
+						<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage preset-tip-percentage" value="10">
+						<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage preset-tip-percentage" value="15">
+						<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage preset-tip-percentage" value="25">
+						<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage preset-tip-percentage" value="50">
+						<div class="custom-tip-radio">
+							<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="Custom">
+							<input type="number" id="custom-tip" name="custom_tip" placeholder="Custom" aria-label="Custom tip percentage">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-section">
+				<label for="number-of-people" class="input-label">Number of People</label>
+				<div class="input-wrapper">
+					<img src="./images/icon-person.svg" alt="">
+					<input type="number" id="number-of-people" name="number_of_people" class="number-of-people" placeholder="0"
+						required>
+				</div>
+			</div>
 		</form>
 		<section class="results">
 			<div class="calculated-results">
-				<div class="tip-amount">
+				<div class="tip-amount result">
 					<div class="results-label">
 						<p>Tip Amount</p>
-						<p>/ person</p>
+						<p class="results-person">/ person</p>
 					</div>
-					<div class="amount-diplay tip-per-person">$4.27</div>
+					<div class="amount-display tip-per-person">$4.27</div>
 				</div>
-				<div class="total-amount">
+				<div class="total-amount result">
 					<div class="results-label">
 						<p>Tip Amount</p>
-						<p>/ person</p>
+						<p class="results-person">/ person</p>
 					</div>
-					<div class="amount-diplay total-per-person">$32.79</div>
+					<div class="amount-display total-per-person">$32.79</div>
 				</div>
 			</div>
 			<button class="reset-button">Reset</button>
