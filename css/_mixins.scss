@@ -1,0 +1,40 @@
+@mixin label-typography {
+	color: $gray-500;
+	font: var(--font-5);
+}
+
+@mixin field-typography {
+	color: $green-900;
+	font: var(--font-3);
+}
+
+@mixin button-typography {
+	color: $white;
+	font: var(--font-3);
+}
+
+@mixin results-label-typography {
+	color: $white;
+	font: var(--font-5);
+}
+
+@mixin results-person-typography {
+	color: $gray-400;
+	font: var(--font-6);
+}
+
+@mixin result-typography-small {
+	color: $green-400;
+	font: var(--font-2);
+	letter-spacing: -0.67px;
+}
+
+@mixin result-typography-large {
+	font: var(--font-1);
+	letter-spacing: -1px;
+}
+
+@mixin reset-typography {
+	color: $green-900;
+	font: var(--font-4);
+}

@@ -1,3 +1,12 @@
+.root {
+  --font-1: 700 3rem / 4.4375rem "Space Mono", sans-serif;
+  --font-2: 700 2rem / 2.9375rem "Space Mono", sans-serif;
+  --font-3: 700 1.5rem / 3rem "Space Mono", sans-serif;
+  --font-4: 700 1.25rem / 1.875rem "Space Mono", sans-serif;
+  --font-5: 700 1rem / 1.5rem "Space Mono", sans-serif;
+  --font-6: 700 0.8125rem / 1.1875rem "Space Mono", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
