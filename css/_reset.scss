@@ -1,5 +1,16 @@
+// We use the following reset to use our preferred box model and remove user agent padding and margins.
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+// We use the following reset to remove number input spinners from all browsers.
+input[type="number"] {
+  appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

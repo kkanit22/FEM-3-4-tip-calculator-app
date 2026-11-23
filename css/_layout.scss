@@ -64,6 +64,10 @@ main {
 				position: relative;
 				width: calc((100% - 1rem) / 2);
 
+				& input[type="radio"] {
+					height: 100%;
+				}
+
 				& input[type="number"] {
 					position: absolute;
 					top: 0;
