@@ -17,27 +17,52 @@
 </head>
 
 <body>
+	<header>
+		<img src="./images/logo.svg" alt="Splitter" />
+	</header>
+	<main>
+		<form>
+			<label for="bill-amount" class="bill-amount-label">Bill</label>
+			<input type="number" id="bill-amount" name="bill_amount" class="bill-amount"  placeholder="0" required>
 
-	Bill
+			<div class="tip-percentage-options">
+				<label for="tip-percentage" class="tip-percentage-label">Select Tip %</label>
+				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="5%" checked>
 
-	Select Tip %
-	5%
-	10%
-	15%
-	25%
-	50%
-	Custom
+				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="10%">
 
-	Number of People
+				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="15%">
 
-	Tip Amount
-	/ person
+				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="25%">
 
-	Total
-	/ person
+				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="50%">
 
-	Reset
+				<input type="radio" id="tip-percentage" name="tip_percentage" class="tip-percentage" value="Custom">
+			</div>
 
+			<label for="number-of-people" class="number-of-people-label">Number of People</label>
+			<input type="number" id="number-of-people" name="number_of_people" class="number-of-people" placeholder="0" required>
+		</form>
+		<section class="results">
+			<div class="calculated-results">
+				<div class="tip-amount">
+					<div class="results-label">
+						<p>Tip Amount</p>
+						<p>/ person</p>
+					</div>
+					<div class="amount-diplay tip-per-person">$4.27</div>
+				</div>
+				<div class="total-amount">
+					<div class="results-label">
+						<p>Tip Amount</p>
+						<p>/ person</p>
+					</div>
+					<div class="amount-diplay total-per-person">$32.79</div>
+				</div>
+			</div>
+			<button class="reset-button">Reset</button>
+		</section>
+	</main>
 	<footer class="attribution">
 		Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
 		Coded by <a href="#">Your Name Here</a>.
