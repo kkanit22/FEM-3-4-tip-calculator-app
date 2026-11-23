@@ -33,6 +33,7 @@
 }
 
 @mixin result-typography-large {
+	color: variables.$green-400;
 	font: var(--font-1);
 	letter-spacing: -1px;
 }

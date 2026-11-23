@@ -10,6 +10,10 @@ main {
   background: variables.$white;
   border-radius: 1.5625rem 1.5625rem 0 0;
 
+	@media screen and (min-width: 600px) {
+		border-radius: 1.5625rem;
+	}
+
   form {
     & .input-label {
       @include mixins.label-typography;
@@ -20,7 +24,6 @@ main {
       border-radius: 0.3125rem;
 
       &:has(input:focus) {
-        // border: 2px solid variables.$green-400
         box-shadow: inset 0 0 0 2px variables.$green-400;
       }
 
@@ -49,7 +52,6 @@ main {
     & .custom-tip-radio {
       background: variables.$gray-50;
       border-radius: 0.3125rem;
-      padding: 0 1rem;
 
       &::after {
         @include mixins.button-typography;
@@ -67,9 +69,11 @@ main {
       }
       & input[type="radio"] {
         appearance: none;
+				background: transparent;
       }
       & input[type="number"] {
         @include mixins.button-typography;
+				background: transparent;
         border: none;
         color: transparent;
         outline: none;
@@ -97,6 +101,10 @@ main {
 
     & .amount-display {
       @include mixins.result-typography-small;
+
+			@media screen and (min-width: 600px) {
+				@include mixins.result-typography-large;
+			}
     }
 
     & .reset-button {
@@ -110,6 +118,7 @@ main {
 }
 
 .attribution {
+	font-family: serif;
   font-size: 0.6875rem;
   text-align: center;
 }
