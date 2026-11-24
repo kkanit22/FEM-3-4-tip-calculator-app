@@ -25,22 +25,30 @@
 			<div class="form-section">
 				<label for="bill-amount" class="input-label">Bill</label>
 				<div class="input-wrapper">
+					<span class="error-message" aria-live="polite" aria-describedby="number-error">Can't be zero</span>
 					<img src="./images/icon-dollar.svg" alt="" />
-					<input type="number" id="bill-amount" name="bill_amount" class="bill-amount" placeholder="0" required>
+					<input type="number" id="bill-amount" name="bill_amount" class="bill-amount default" placeholder="0" min="0"
+						required>
 				</div>
 			</div>
 			<div class="form-section">
 				<div class="tip-percentage-options">
-					<label for="tip-percentage-5" class="input-label">Select Tip %</label>
+					<label for="custom-tip" class="input-label">Select Tip %</label>
 					<div class="radio-array">
-						<input type="radio" id="tip-percentage-5" name="tip_percentage" class="tip-percentage preset-tip-percentage" value="5" checked>
-						<input type="radio" id="tip-percentage-10" name="tip_percentage" class="tip-percentage preset-tip-percentage" value="10">
-						<input type="radio" id="tip-percentage-15" name="tip_percentage" class="tip-percentage preset-tip-percentage" value="15">
-						<input type="radio" id="tip-percentage-25" name="tip_percentage" class="tip-percentage preset-tip-percentage" value="25">
-						<input type="radio" id="tip-percentage-50" name="tip_percentage" class="tip-percentage preset-tip-percentage" value="50">
+						<input type="radio" id="tip-percentage-5" name="tip_percentage" class="tip-percentage preset-tip-percentage"
+							value="5">
+						<input type="radio" id="tip-percentage-10" name="tip_percentage"
+							class="tip-percentage preset-tip-percentage" value="10">
+						<input type="radio" id="tip-percentage-15" name="tip_percentage"
+							class="tip-percentage preset-tip-percentage" value="15">
+						<input type="radio" id="tip-percentage-25" name="tip_percentage"
+							class="tip-percentage preset-tip-percentage" value="25">
+						<input type="radio" id="tip-percentage-50" name="tip_percentage"
+							class="tip-percentage preset-tip-percentage" value="50">
 						<div class="custom-tip-radio" data-display="Custom">
-							<input type="radio" id="tip-percentage-custom" name="tip_percentage" class="tip-percentage" value="Custom">
-							<input type="number" id="custom-tip" name="custom_tip" aria-label="Custom tip percentage">
+							<input type="radio" id="tip-percentage-custom" name="tip_percentage" class="tip-percentage"
+								value="Custom">
+							<input type="number" id="custom-tip" name="custom_tip" aria-label="Custom tip percentage" min="0">
 						</div>
 					</div>
 				</div>
@@ -48,9 +56,10 @@
 			<div class="form-section">
 				<label for="number-of-people" class="input-label">Number of People</label>
 				<div class="input-wrapper">
+					<span class="error-message" aria-live="polite" aria-describedby="number-error">Can't be zero</span>
 					<img src="./images/icon-person.svg" alt="">
-					<input type="number" id="number-of-people" name="number_of_people" class="number-of-people" placeholder="0"
-						required>
+					<input type="number" id="number-of-people" name="number_of_people" class="number-of-people default"
+						placeholder="0" min="0" required>
 				</div>
 			</div>
 		</form>

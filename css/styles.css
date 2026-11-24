@@ -44,9 +44,25 @@ main form .input-label {
 main form .input-wrapper {
   background: #F3F9FA;
   border-radius: 0.3125rem;
+  position: relative;
 }
 main form .input-wrapper:has(input:focus) {
   box-shadow: inset 0 0 0 2px #26C2AE;
+}
+main form .input-wrapper:has(input.invalid) {
+  box-shadow: inset 0 0 0 2px #E17052;
+}
+main form .input-wrapper:has(input.invalid) .error-message {
+  color: #E17052;
+  display: block;
+}
+main form .input-wrapper .error-message {
+  color: #5E7A7D;
+  font: var(--font-5);
+  display: none;
+  position: absolute;
+  top: -1.5rem;
+  right: 0;
 }
 main form .input-wrapper input {
   color: #00474B;
@@ -55,8 +71,14 @@ main form .input-wrapper input {
   background: transparent;
   border: 0;
 }
+main form .input-wrapper input.default {
+  opacity: 35%;
+}
 main form .input-wrapper input:focus {
   outline: none;
+}
+main form .input-wrapper input:hover {
+  cursor: pointer;
 }
 main form input[type=radio] {
   color: #FFFFFF;
@@ -66,12 +88,28 @@ main form input[type=radio] {
   border-radius: 0.3125rem;
   padding: 0 1rem;
 }
+main form input[type=radio]:checked {
+  background: #26C2AE;
+  color: #00474B;
+}
+main form input[type=radio]:hover {
+  background: #9FE8DF;
+  color: #00474B;
+  cursor: pointer;
+}
 main form input[type=radio].preset-tip-percentage::after {
   content: attr(value) "%";
 }
 main form .custom-tip-radio {
   background: #F3F9FA;
   border-radius: 0.3125rem;
+}
+main form .custom-tip-radio:has(input[type=number]:focus) {
+  box-shadow: inset 0 0 0 2px #26C2AE;
+  outline: none;
+}
+main form .custom-tip-radio:has(input[type=number].invalid) {
+  box-shadow: inset 0 0 0 2px #E17052;
 }
 main form .custom-tip-radio::after {
   color: #FFFFFF;
@@ -101,9 +139,8 @@ main form .custom-tip-radio input[type=number] {
   outline: none;
   position: relative;
 }
-main form .custom-tip-radio input[type=number]:focus {
-  box-shadow: inset 0 0 0 2px #26C2AE;
-  outline: none;
+main form .custom-tip-radio input[type=number]:hover {
+  cursor: pointer;
 }
 main .results {
   background: #00474B;
@@ -137,6 +174,10 @@ main .results .reset-button {
   border: 0;
   border-radius: 0.3125rem;
   padding: 0.5rem 2rem;
+}
+main .results .reset-button:hover {
+  background: #9FE8DF;
+  cursor: pointer;
 }
 
 .attribution {
