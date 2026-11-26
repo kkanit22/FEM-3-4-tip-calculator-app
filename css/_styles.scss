@@ -154,7 +154,7 @@ main {
       border-radius: 0.3125rem;
       padding: 0.5rem 2rem;
 
-			&:hover {
+			&:hover, &:focus {
 				background: variables.$green-200;
 				cursor: pointer;
 			}

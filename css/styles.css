@@ -175,7 +175,7 @@ main .results .reset-button {
   border-radius: 0.3125rem;
   padding: 0.5rem 2rem;
 }
-main .results .reset-button:hover {
+main .results .reset-button:hover, main .results .reset-button:focus {
   background: #9FE8DF;
   cursor: pointer;
 }
