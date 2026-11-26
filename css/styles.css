@@ -46,7 +46,7 @@ main form .input-wrapper {
   border-radius: 0.3125rem;
   position: relative;
 }
-main form .input-wrapper:has(input:focus) {
+main form .input-wrapper:hover, main form .input-wrapper:has(input:focus) {
   box-shadow: inset 0 0 0 2px #26C2AE;
 }
 main form .input-wrapper:has(input.invalid) {
